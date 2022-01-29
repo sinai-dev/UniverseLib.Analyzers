@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+
+        <IsPackable>false</IsPackable>
+
+        <ApplicationIcon />
+
+        <OutputType>Library</OutputType>
+
+        <LangVersion>9.0</LangVersion>
+
+        <StartupObject />
+    </PropertyGroup>
+
+    <ItemGroup>
+        <packagereference Include="Microsoft.NET.Test.Sdk" Version="15.0.0"></packagereference>
+        <packagereference Include="NUnit" Version="3.7.1"></packagereference>
+        <packagereference Include="NUnit3TestAdapter" Version="3.8.0"></packagereference>
+        <PackageReference Include="SmartAnalyzers.RoslynTestKit" Version="4.1.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\UniverseLib.Analyzers\UniverseLib.Analyzers.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="UnityEngine">
+            <HintPath>..\lib\mono\UnityEngine.dll</HintPath>
+            <Private>true</Private>
+        </Reference>
+        <Reference Include="UnityEngine.UI">
+            <HintPath>..\lib\mono\UnityEngine.UI.dll</HintPath>
+            <Private>true</Private>
+        </Reference>
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>UniverseLib.Analyzers</PackageId>
+    <PackageVersion>1.0.0.0</PackageVersion>
+    <Authors>sinai-dev</Authors>
+    <PackageLicenseUrl>https://github.com/sinai-dev/UniverseLib/blob/main/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/sinai-dev/UniverseLib</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/sinai-dev/UniverseLib</RepositoryUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Description>UniverseLib.Analyzers</Description>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <Copyright>Copyright sinai-dev 2022</Copyright>
+    <PackageTags>UniverseLib.Analyzers, analyzers</PackageTags>
+    <DevelopmentDependency>true</DevelopmentDependency>
+    <NoPackageAnalysis>true</NoPackageAnalysis>
+
+    <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);_AddAnalyzersToOutput</TargetsForTfmSpecificContentInPackage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- <ProjectReference Include="..\UniverseLib.Analyzers.CodeFixes\UniverseLib.Analyzers.CodeFixes.csproj" /> -->
+    <ProjectReference Include="..\UniverseLib.Analyzers\UniverseLib.Analyzers.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="tools\*.ps1" CopyToOutputDirectory="Always" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  <Target Name="_AddAnalyzersToOutput">
+    <ItemGroup>
+      <TfmSpecificPackageFile Include="$(OutputPath)\UniverseLib.Analyzers.dll" PackagePath="analyzers/dotnet/cs" />
+      <!-- <TfmSpecificPackageFile Include="$(OutputPath)\UniverseLib.Analyzers.CodeFixes.dll" PackagePath="analyzers/dotnet/cs" /> -->
+    </ItemGroup>
+  </Target>
+
+</Project>
