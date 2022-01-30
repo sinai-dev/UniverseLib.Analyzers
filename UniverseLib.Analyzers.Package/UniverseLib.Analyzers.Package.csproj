@@ -9,7 +9,7 @@
 
   <PropertyGroup>
     <PackageId>UniverseLib.Analyzers</PackageId>
-    <PackageVersion>1.0.0.0</PackageVersion>
+    <PackageVersion>1.0.1.0</PackageVersion>
     <Authors>sinai-dev</Authors>
     <PackageLicenseUrl>https://github.com/sinai-dev/UniverseLib.Analyzers/blob/main/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/sinai-dev/UniverseLib.Analyzers</PackageProjectUrl>
