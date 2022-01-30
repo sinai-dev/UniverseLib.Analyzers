@@ -11,11 +11,11 @@
     <PackageId>UniverseLib.Analyzers</PackageId>
     <PackageVersion>1.0.0.0</PackageVersion>
     <Authors>sinai-dev</Authors>
-    <PackageLicenseUrl>https://github.com/sinai-dev/UniverseLib/blob/main/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/sinai-dev/UniverseLib</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/sinai-dev/UniverseLib</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/sinai-dev/UniverseLib.Analyzers/blob/main/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/sinai-dev/UniverseLib.Analyzers</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/sinai-dev/UniverseLib.Analyzers</RepositoryUrl>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Description>UniverseLib.Analyzers</Description>
+    <Description>Analyzers for using UniverseLib and avoiding common mistakes when making universal Unity mods and tools.</Description>
     <PackageReleaseNotes></PackageReleaseNotes>
     <Copyright>Copyright sinai-dev 2022</Copyright>
     <PackageTags>UniverseLib.Analyzers, analyzers</PackageTags>
@@ -26,7 +26,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- <ProjectReference Include="..\UniverseLib.Analyzers.CodeFixes\UniverseLib.Analyzers.CodeFixes.csproj" /> -->
     <ProjectReference Include="..\UniverseLib.Analyzers\UniverseLib.Analyzers.csproj" />
   </ItemGroup>
 
@@ -37,7 +36,6 @@
   <Target Name="_AddAnalyzersToOutput">
     <ItemGroup>
       <TfmSpecificPackageFile Include="$(OutputPath)\UniverseLib.Analyzers.dll" PackagePath="analyzers/dotnet/cs" />
-      <!-- <TfmSpecificPackageFile Include="$(OutputPath)\UniverseLib.Analyzers.CodeFixes.dll" PackagePath="analyzers/dotnet/cs" /> -->
     </ItemGroup>
   </Target>
 
