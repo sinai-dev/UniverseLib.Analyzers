@@ -28,9 +28,23 @@ class C
         [|x.childControlWidth = false;|]
         [|x.childControlHeight = false;|]
     }
-}";
+}
+";
 
             HasDiagnostic(code, LayoutGroupChildControlAnalyzer.ID);
+        }
+
+        [Test]
+        public void NoDiagnostic()
+        {
+            const string code = @"
+public static class Il2CppExtensions
+{
+    public static void SetChildControlHeight(this HorizontalOrVerticalLayoutGroup group, bool value) => group.childControlHeight = value;
+    public static void SetChildControlWidth(this HorizontalOrVerticalLayoutGroup group, bool value) => group.childControlWidth = value;
+}
+";
+            NoDiagnostic(code, LayoutGroupChildControlAnalyzer.ID);
         }
     }
 }

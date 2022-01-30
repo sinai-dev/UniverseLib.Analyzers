@@ -42,7 +42,7 @@ namespace UniverseLib.Analyzers.Unity
 
             if (context.ContainingSymbol?.ContainingType is ITypeSymbol contextType)
             {
-                if (contextType.NamespaceEquals("UniverseLib.Runtime.Il2Cpp"))
+                if (contextType.Name == "Il2CppExtensions")
                     return;
             }
 
