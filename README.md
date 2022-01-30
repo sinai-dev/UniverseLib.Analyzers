@@ -1,6 +1,6 @@
 # UniverseLib.Analyzers
 
-[![](https://img.shields.io/nuget/v/UniverseLib.Analyzers)](https://www.nuget.org/packages/UniverseLib.Analyzers/1.0.0)
+[![](https://img.shields.io/nuget/v/UniverseLib.Analyzers)](https://www.nuget.org/packages/UniverseLib.Analyzers)
 
 Analyzers for using [UniverseLib](https://github.com/sinai-dev/UniverseLib) and avoiding common mistakes when making universal Unity mods and tools.
 
